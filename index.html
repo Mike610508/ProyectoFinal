@@ -1,0 +1,100 @@
+<!--para los iconos de redes sociales en iconos8.es-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Librería Online</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="datos.js" defer></script>
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <div class="contenedor">
+        <h1>Librería Online</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#nosotros">Sobre Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="carrito-icono" id="carrito-icono">
+            🛒 <span id="contador-carrito">0</span>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section id="inicio" class="banner">
+    <h2>Descubre tu próximo libro</h2>
+</section>
+
+<section id="catalogo">
+
+    <div class="herramientas">
+        <input type="text" id="busqueda" placeholder="Buscar...">
+
+        <select id="categoria">
+            <option value="todas">Todas</option>
+            <option value="novela">Novela</option>
+            <option value="ciencia">Ciencia</option>
+            <option value="fantasia">Fantasía</option>
+            <option value="infantil">Infantil</option>
+        </select>
+
+        <button id="btn-buscar">Buscar</button>
+    </div>
+
+    <div id="productos" class="grid"></div>
+    <div id="sin-resultados" class="oculto">No hay resultados</div>
+
+</section>
+
+<section id="nosotros" class="nosotros">
+    <div class="contenedor">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una librería online donde puedes encontrar libros de todos los géneros.</p>
+    </div>
+</section>
+
+</main>
+
+<footer id="contacto">
+    <h3>Contacto</h3>
+    <p>Email: miguel.monrreal61@gmail.com</p>
+    <p>Tel: 55 5997 0320</p>
+
+    <div class="redes">
+        <img src="img/facebook.svg">
+        <img src="img/instagram.svg">
+        <img src="img/tiktok.svg">
+        <img src="img/twitterx.svg">
+        <img src="img/youtube.svg">
+    </div>
+</footer>
+
+<!-- CARRITO -->
+<div id="modal-carrito" class="modal oculto">
+    <div class="contenido">
+        <h2>Carrito</h2>
+        <div id="carrito-items"></div>
+        <p>Total: $<span id="carrito-total">0.00</span></p>
+
+        <button id="vaciar-carrito">Vaciar</button>
+        <button id="pagar">Pagar</button>
+        <button id="cerrar-carrito">Cerrar</button>
+    </div>
+</div>
+
+</body>
+</html>
